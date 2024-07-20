@@ -28,11 +28,11 @@ logic and its tests serves as end-to-end for underlying components
 ## Implementation
 Implementation follows from efficiency considerations. Two top level operations were desired to be as quick as possible:
 - Add Order
-  - (O(log(n)) for first limit order at a price, where n is number of prices in that side of the book)
-  - (O(c) otherwise and for market orders)
+  - O(log(n)) for first limit order at a price, where n is number of prices in that side of the book
+  - O(c) otherwise and for market orders
 - Cancel Order
-  - (O(log(n)) for last limit order at a price, where n is number of prices in that side of the book)
-  - (O(c) otherwise and for market orders)
+  - O(log(n)) for last limit order at a price, where n is number of prices in that side of the book
+  - O(c) otherwise and for market orders
 
 This was done for each side of the limit order book using:
 - sorted list for prices
